@@ -1,0 +1,16 @@
+<h1>All Books</h1>
+
+<%= link_to "Add a new book", new_book_path%>
+<% @books.each do |book| %>
+
+    <h3><%= link_to book.title, book %></h3>
+    <p><%= book.description %></p>
+    <p>
+        <%= image_tag(book.image.thumb.url) if book.image %>
+    </p>
+    <hr>
+<% end %>
+
+
+
+

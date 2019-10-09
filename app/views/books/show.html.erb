@@ -1,0 +1,12 @@
+<%= link_to "Back to all books", books_path %>
+<%= link_to "Add a new book", new_book_path%>
+
+<h1><%= @book.title %></h1>
+
+<p> <%= @book.description %></p>
+<p>
+    <%= image_tag(@book.image.url) if @book.image %>
+</p>
+<p>
+<%= link_to "Edit", edit_book_path %> | <%= link_to "Delete", @book, method: :delete, data: {confirm: "Are you sure?"} %>
+</p>
